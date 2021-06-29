@@ -1,6 +1,8 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 
+
+
 require_once "controladores/plantilla.controlador.php";
 require_once "controladores/usuarios.controlador.php";
 require_once "controladores/categorias.controlador.php";
