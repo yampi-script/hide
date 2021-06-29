@@ -3,9 +3,6 @@
 <link rel="stylesheet" href="vistas/bower_components/tabs/css/table.css">
 <script src="vistas/bower_components/tabs/jquery-1.12.4.js"></script>
 <script src="vistas/bower_components/tabs/jquery-ui.js"></script>
-
-
-
 <script>
 $(function() {
     $("#tabs").tabs();
@@ -73,37 +70,116 @@ $estatus=$pregunta[0]["estatus"];
 ?>
 
 
+
+
+
+
+
+
             </div><br><br>
-
-
-
             </header>
 
+            <style>
+            .disabledTab{
+                pointer-events: none;
+            }
+            </style>
 
 
+
+            <?php
+//BUSCAR PREGUNTA Formulario
+$pregunta = ModeloJueces:: mdlMostrarJueces("jueces","uuid", $_SESSION["id"]);
+
+if(count($pregunta)==0){
+$idFormulario=0;
+}else{
+$idFormulario=$pregunta[0]["id"];
+$estatus=$pregunta[0]["estatus"];
+$pcontacto=$pregunta[0]["pcontacto"];
+$area=$pregunta[0]["area"];
+$cargo=$pregunta[0]["cargo"];
+$mail=$pregunta[0]["mail"];
+$telofi=$pregunta[0]["telofi"];
+$ext=$pregunta[0]["ext"];
+$telextra=$pregunta[0]["telextra"];
+$pcontacto2=$pregunta[0]["pcontacto2"];
+$area2=$pregunta[0]["area2"];
+$cargo2=$pregunta[0]["cargo2"];
+$mail2=$pregunta[0]["mail2"];
+$telofi2=$pregunta[0]["telofi2"];
+$ext2=$pregunta[0]["ext2"];
+$telextra2=$pregunta[0]["telextra2"];
+
+
+}
+?>
 
             <div class="row" style="margin-right: 15px;margin-left: 15px;">
 
                 <!-- Tab Contacto principal -->
-                <style>
-                .disabled {
-        pointer-events:none; //This makes it not clickable
-        opacity:0.6;         //This grays it out to look disabled
-    }        </style>
 
                 <div id="tabs">
 
-                    <ul style="position:fixed; z-index: 100px;" class="btn-flotante-2">
+                    <ul style="position:fixed; z-index: 100px;" class="btn-flotante-2 nav nav-tabs mytabs">
   <li><a href="#tabs-1-ind">INSTRUCCIONES</a></li>
-                        <li ><a  href="#tabs-1">Contacto</a></li>
-                        <li ><a href="#tabs-2">1</a></li>
-                        <li><a href="#tabs-3">2</a></li>
-                        <li><a href="#tabs-4">3</a></li>
-                        <li><a href="#tabs-5">4</a></li>
-                        <li><a href="#tabs-6">5</a></li>
-                        <li><a href="#tabs-7">6</a></li>
-                        <li><a href="#tabs-8">7</a></li>
-                        <li><a href="#tabs-9">8</a></li>
+                        <li><a href="#tabs-1">Contacto</a></li>
+                        <li  class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a  href="#tabs-2">1</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-3">2</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-4">3</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-5">4</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-6">5</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-7">6</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-8">7</a></li>
+                        <li class="<?php if(($pcontacto == "") || ($area == "") ||
+                            ($cargo == "") || ($mail == "") ||
+                            ($telofi == "") || ($ext == "") ||
+                            ($telextra == "") || ($pcontacto2 == "") ||
+                            ($area2 == "") || ($cargo2 == "") ||
+                            ($mail2 == "") || ($telofi2 == "") ||
+                            ($ext2 == "") || ($telextra2 == "")) { echo "disabled disabledTab"; } ?>" ><a href="#tabs-9">8</a></li>
 
                     </ul>
 
@@ -152,33 +228,7 @@ $UUID = $UUID["generaUUID"];
                                                     <input type="hidden" class="form-control pull-right" name="UUID"
                                                         id="UUID" placeholder="UUID"
                                                         value="<?php echo $_SESSION["id"]; ?>">
-                                                    <?php
-//BUSCAR PREGUNTA Formulario
-$pregunta = ModeloJueces:: mdlMostrarJueces("jueces","uuid", $_SESSION["id"]);
 
-if(count($pregunta)==0){
-$idFormulario=0;
-}else{
-$idFormulario=$pregunta[0]["id"];
-$estatus=$pregunta[0]["estatus"];
-$pcontacto=$pregunta[0]["pcontacto"];
-$area=$pregunta[0]["area"];
-$cargo=$pregunta[0]["cargo"];
-$mail=$pregunta[0]["mail"];
-$telofi=$pregunta[0]["telofi"];
-$ext=$pregunta[0]["ext"];
-$telextra=$pregunta[0]["telextra"];
-$pcontacto2=$pregunta[0]["pcontacto2"];
-$area2=$pregunta[0]["area2"];
-$cargo2=$pregunta[0]["cargo2"];
-$mail2=$pregunta[0]["mail2"];
-$telofi2=$pregunta[0]["telofi2"];
-$ext2=$pregunta[0]["ext2"];
-$telextra2=$pregunta[0]["telextra2"];
-
-
-}
-?>
 
                                                     <input type="hidden" class="form-control pull-right"
                                                         name="idFormulario" id="idFormulario" placeholder="idFormulario"
@@ -508,6 +558,10 @@ $telextra2=$pregunta[0]["telextra2"];
     /* j2.1 */$personal_j2_1_otros_H=$pregunta[0]["personal_j2_1_otros_H"];
     /* j2.1 */$personal_j2_1_otros_T=$pregunta[0]["personal_j2_1_otros_T"];
 
+    /* j2.1 */$personal_j2_1_total_M=$pregunta[0]["personal_j2_1_total_M"];
+    /* j2.1 */$personal_j2_1_total_H=$pregunta[0]["personal_j2_1_total_H"];
+    /* j2.1 */$personal_j2_1_total_T=$pregunta[0]["personal_j2_1_total_T"];
+
     /* j2.2 */$personal_j2_2_mag_M=$pregunta[0]["personal_j2_2_mag_M"];
     /* j2.2 */$personal_j2_2_mag_H=$pregunta[0]["personal_j2_2_mag_H"];
     /* j2.2 */$personal_j2_2_mag_T=$pregunta[0]["personal_j2_2_mag_T"];
@@ -515,6 +569,12 @@ $telextra2=$pregunta[0]["telextra2"];
     /* j2.3 */$personal_j2_3_jue_M=$pregunta[0]["personal_j2_3_jue_M"];
     /* j2.3 */$personal_j2_3_jue_H=$pregunta[0]["personal_j2_3_jue_H"];
     /* j2.3 */$personal_j2_3_jue_T=$pregunta[0]["personal_j2_3_jue_T"];
+
+
+    /* j2.4 */$personal_j2_4_siningre_M=$pregunta[0]["personal_j2_4_siningre_M"];
+    /* j2.4 */$personal_j2_4_siningre_H=$pregunta[0]["personal_j2_4_siningre_H"];
+    /* j2.4 */$personal_j2_4_siningre_T=$pregunta[0]["personal_j2_4_siningre_T"];
+
 
     /* j2.4 */$personal_j2_4_de1a5000_M=$pregunta[0]["personal_j2_4_de1a5000_M"];
     /* j2.4 */$personal_j2_4_de1a5000_H=$pregunta[0]["personal_j2_4_de1a5000_H"];
@@ -589,6 +649,8 @@ $telextra2=$pregunta[0]["telextra2"];
     /* j3 */$capacitacion_j3_otros_H=$pregunta[0]["capacitacion_j3_otros_H"];
     /* j3 */$capacitacion_j3_otros_T=$pregunta[0]["capacitacion_j3_otros_T"];
 
+    /* j3 */$capacitacion_j3_nosesabe=$pregunta[0]["capacitacion_j3_nosesabe"];
+
     /* j3.1 */$capacitacion_j3_1_sisjus_M=$pregunta[0]["capacitacion_j3_1_sisjus_M"];
     /* j3.1 */$capacitacion_j3_1_sisjus_H=$pregunta[0]["capacitacion_j3_1_sisjus_H"];
     /* j3.1 */$capacitacion_j3_1_sisjus_T=$pregunta[0]["capacitacion_j3_1_sisjus_T"];
@@ -608,6 +670,10 @@ $telextra2=$pregunta[0]["telextra2"];
     /* j3.1 */$capacitacion_j3_1_viomuj_M=$pregunta[0]["capacitacion_j3_1_viomuj_M"];
     /* j3.1 */$capacitacion_j3_1_viomuj_H=$pregunta[0]["capacitacion_j3_1_viomuj_H"];
     /* j3.1 */$capacitacion_j3_1_viomuj_T=$pregunta[0]["capacitacion_j3_1_viomuj_T"];
+
+    /* j3.1 */$capacitacion_j3_1_mujdes_M=$pregunta[0]["capacitacion_j3_1_mujdes_M"];
+    /* j3.1 */$capacitacion_j3_1_mujdes_H=$pregunta[0]["capacitacion_j3_1_mujdes_H"];
+    /* j3.1 */$capacitacion_j3_1_mujdes_T=$pregunta[0]["capacitacion_j3_1_mujdes_T"];
 
     /* j3.1 */$capacitacion_j3_1_asicon_M=$pregunta[0]["capacitacion_j3_1_asicon_M"];
     /* j3.1 */$capacitacion_j3_1_asicon_H=$pregunta[0]["capacitacion_j3_1_asicon_H"];
@@ -671,7 +737,7 @@ $telextra2=$pregunta[0]["telextra2"];
 <div class="panel panel-default">
 
   <div class="panel-heading">
-      <h3 class="panel-title text-center">1.	ESTRUCTURA ORGANIZACIONAL</h3>
+      <h3 class="panel-title text-center">1. ESTRUCTURA ORGANIZACIONAL</h3>
   </div>
 
   <div class="panel-body">
@@ -1107,6 +1173,45 @@ $telextra2=$pregunta[0]["telextra2"];
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                             <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                             value="<?php echo $personal_j2_1_otros_T; ?>">
+                    </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td> 6 </td>
+                <td>
+                  Total
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="personal_j2_1_total_M"
+                            id="personal_j2_1_total_M"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $personal_j2_1_total_M; ?>">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="input-group">
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="personal_j2_1_total_H"
+                            id="personal_j2_1_total_H"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $personal_j2_1_total_H; ?>">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="input-group">
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="personal_j2_1_total_T"
+                            id="personal_j2_1_total_T"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $personal_j2_1_total_T; ?>">
                     </div>
                 </td>
               </tr>
@@ -1792,7 +1897,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_mag_M"
                             id="capacitacion_j3_mag_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1803,7 +1908,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_mag_H"
                             id="capacitacion_j3_mag_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1814,7 +1919,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_mag_T"
                             id="capacitacion_j3_mag_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1831,7 +1936,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_jec_M"
                             id="capacitacion_j3_jec_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1842,7 +1947,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_jec_H"
                             id="capacitacion_j3_jec_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1853,7 +1958,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_jec_T"
                             id="capacitacion_j3_jec_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1870,7 +1975,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_sec_M"
                             id="capacitacion_j3_sec_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1881,7 +1986,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_sec_H"
                             id="capacitacion_j3_sec_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1892,7 +1997,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_sec_T"
                             id="capacitacion_j3_sec_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1909,7 +2014,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_act_M"
                             id="capacitacion_j3_act_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1920,7 +2025,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_act_H"
                             id="capacitacion_j3_act_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1931,7 +2036,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_act_T"
                             id="capacitacion_j3_act_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1948,7 +2053,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otrserv_M"
                             id="capacitacion_j3_otrserv_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1959,7 +2064,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otrserv_H"
                             id="capacitacion_j3_otrserv_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1970,7 +2075,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otrserv_T"
                             id="capacitacion_j3_otrserv_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -1985,15 +2090,15 @@ $telextra2=$pregunta[0]["telextra2"];
                 <td>
                   <div style="float:left;"> Otros (¿Cuáles?)    &nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="input-group">
-                        <input type="text" class="form-control"
-                            name="capacitacion_j3_otros" id="capacitacion_j3_otros"
+                        <input type="text" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
+                            name="capacitacion_j3_otros" id="capacitacion_j3_otros "
                             <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                             value="<?php echo $capacitacion_j3_otros; ?>">
                     </div>
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otros_M" id="capacitacion_j3_otros_M"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                             <?php if($estatus != 0) { echo "disabled='true'"; } ?>
@@ -2002,7 +2107,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otros_H" id="capacitacion_j3_otros_H"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                             <?php if($estatus != 0) { echo "disabled='true'"; } ?>
@@ -2011,7 +2116,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 </td>
                 <td>
                     <div class="input-group">
-                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group03";}?>"
                             name="capacitacion_j3_otros_T" id="capacitacion_j3_otros_T"
                             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                             <?php if($estatus != 0) { echo "disabled='true'"; } ?>
@@ -2019,8 +2124,21 @@ $telextra2=$pregunta[0]["telextra2"];
                     </div>
                 </td>
               </tr>
+
             </tbody>
           </table>
+
+
+          <div>
+              <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+              class="form-check-box" type="checkbox"
+                     name="capacitacion_j3_nosesabe"
+                     id="capacitacion_j3_nosesabe"
+                     <?php if ($capacitacion_j3_nosesabe == "No se sabe"){echo ' checked="checked"'; }?> />
+              <label class="form-check-label" for="capacitacion_j3_nosesabe">
+                  No se sabe
+              </label>
+          </div>
           <!--  Fin PREGUNTA 3  -->
 
           <!--  Inicio PREGUNTA 3.1  -->
@@ -2239,6 +2357,45 @@ $telextra2=$pregunta[0]["telextra2"];
               <tr>
                 <td> 6 </td>
                 <td>
+                  Atención de casos de mujeres desaparecidas
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="capacitacion_j3_1_mujdes_M"
+                            id="capacitacion_j3_1_mujdes_M"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $capacitacion_j3_1_mujdes_M; ?>">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="input-group">
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="capacitacion_j3_1_mujdes_H"
+                            id="capacitacion_j3_1_mujdes_H"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $capacitacion_j3_1_mujdes_H; ?>">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="input-group">
+                      <input type="number" min="0" pattern="^[0-9]+" class="form-control"
+                            name="capacitacion_j3_1_mujdes_T"
+                            id="capacitacion_j3_1_mujdes_T"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                            <?php if($estatus != 0) { echo "disabled='true'"; } ?>
+                            value="<?php echo $capacitacion_j3_1_mujdes_T; ?>">
+                    </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td> 7 </td>
+                <td>
                   Asistencia consular y derechos de extranjeros
                 </td>
                 <td>
@@ -2276,7 +2433,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 7 </td>
+                <td> 8 </td>
                 <td>
                   Sistema Integral de Justicia Penal para Adolescentes
                 </td>
@@ -2315,7 +2472,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 8 </td>
+                <td> 9 </td>
                 <td>
                   Ejecución de sanciones
                 </td>
@@ -2354,7 +2511,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 9 </td>
+                <td> 10 </td>
                 <td>
                   Atención a personas indígenas
                 </td>
@@ -2393,7 +2550,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 10 </td>
+                <td> 11 </td>
                 <td>
                   Atención a personas con discapacidad
                 </td>
@@ -2432,7 +2589,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 11 </td>
+                <td> 12 </td>
                 <td>
                   Justicia Alternativa
                 </td>
@@ -2471,7 +2628,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 12 </td>
+                <td> 13 </td>
                 <td>
                   Justicia Terapéutica
                 </td>
@@ -2510,7 +2667,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 13 </td>
+                <td> 14 </td>
                 <td>
                   Justicia Transicional
                 </td>
@@ -2549,7 +2706,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 14 </td>
+                <td> 15 </td>
                 <td>
                   Reparación del daño
                 </td>
@@ -2588,7 +2745,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 15 </td>
+                <td> 16 </td>
                 <td>
                   Tortura
                 </td>
@@ -2627,7 +2784,7 @@ $telextra2=$pregunta[0]["telextra2"];
               </tr>
 
               <tr>
-                <td> 16 </td>
+                <td> 17 </td>
                 <td>
                   <div style="float:left;"> Otros temas (¿Cuáles?)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="input-group">
@@ -5481,7 +5638,7 @@ $telextra2=$pregunta[0]["telextra2"];
 
                 <!--  Inicio PREGUNTA 11  -->
                 <div>
-                  <h5>11.- ¿Cuentan con un sistema/plataforma en donde ofrecen servicios de justicia digital para la ciudadanía?
+                  <h5>11.- ¿La institución cuenta con un sistema/plataforma en dónde ofrecer servicios de justicia digital para la ciudadanía?
                   </h5>
                 </div>
                 <table class="table">
@@ -5547,7 +5704,7 @@ $telextra2=$pregunta[0]["telextra2"];
                 <!--  Inicio PREGUNTA 11.2  -->
                 <div>
                   <h5>
-                    11.2.- Favor de proporcionar el vínculo o liga de acceso:
+                    11.2.- Favor de proporcionar el vínculo o liga de acceso.
                   </h5>
                 </div>
 
@@ -6477,7 +6634,7 @@ $telextra2=$pregunta[0]["telextra2"];
                <tr>
                  <td>6</td>
                  <td>
-                   <div style="float:left;"> Otro (de qué tipo)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                   <div style="float:left;"> Otro (¿Cuáles?)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
                      <div class="input-group">
                          <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                          type="text" class="form-control <?php if($estatus == 0){echo  "group1514";}?>"
@@ -6745,7 +6902,7 @@ $telextra2=$pregunta[0]["telextra2"];
                <tr>
                  <td>6</td>
                  <td>
-                   <div style="float:left;"> Otros (de qué tipo)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                   <div style="float:left;"> Otros (¿Cuáles?)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
                      <div class="input-group">
                          <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                          type="text" class="form-control <?php if($estatus == 0){echo  "group1515";}?>"
@@ -7033,7 +7190,7 @@ $telextra2=$pregunta[0]["telextra2"];
               <tr>
                 <td>6</td>
                 <td>
-                  <div style="float:left;"> Otros (de qué tipo)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div style="float:left;"> Otros (¿Cuáles?)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="input-group">
                         <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                         type="text" class="form-control <?php if($estatus == 0){echo  "group1522";}?>"
@@ -7295,7 +7452,7 @@ $telextra2=$pregunta[0]["telextra2"];
                              <tr>
                                <td>6</td>
                                <td>
-                                 <div style="float:left;"> Otros (de qué tipo)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                 <div style="float:left;"> Otros (¿Cuáles?)     &nbsp;&nbsp;&nbsp;&nbsp;</div>
                                    <div class="input-group">
                                        <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
                                        type="text" class="form-control <?php if($estatus == 0){echo  "group1523";}?>"
@@ -9869,10 +10026,7 @@ $idFormulario=$pregunta[0]["id"];
 /* j20 */  $sentencias_j20_3_traMen_M=$pregunta[0]["sentencias_j20_3_traMen_M"];
 /* j20 */  $sentencias_j20_3_traMen_H=$pregunta[0]["sentencias_j20_3_traMen_H"];
 /* j20 */  $sentencias_j20_3_traMen_T=$pregunta[0]["sentencias_j20_3_traMen_T"];
-/* j20 */  $sentencias_j20_3_otros=$pregunta[0]["sentencias_j20_3_otros"];
-/* j20 */  $sentencias_j20_3_otros_M=$pregunta[0]["sentencias_j20_3_otros_M"];
-/* j20 */  $sentencias_j20_3_otros_H=$pregunta[0]["sentencias_j20_3_otros_H"];
-/* j20 */  $sentencias_j20_3_otros_T=$pregunta[0]["sentencias_j20_3_otros_T"];
+
 /* j20 */  $sentencias_j20_3_noapli=$pregunta[0]["sentencias_j20_3_noapli"];
 /* j20 */  $sentencias_j20_3_nosesabe=$pregunta[0]["sentencias_j20_3_nosesabe"];
 /* j20 */  $sentencias_j20_4_suspenCond=$pregunta[0]["sentencias_j20_4_suspenCond"];
@@ -10652,45 +10806,6 @@ $idFormulario=$pregunta[0]["id"];
                          </td>
                        </tr>
 
-                                 <tr>
-                                   <td>11</td>
-                                 <td>
-                                 <div style="float:left;"> Otros (agregar las vinculaciones por el resto de los delitos) &nbsp;&nbsp;&nbsp;&nbsp;</div>
-                                  <div class="input-group">
-                                    <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
-                                    type="text" class="form-control <?php if($estatus == 0){echo  "group203";}?>"
-                                    name="sentencias_j20_3_otros" id="sentencias_j20_3_otros"
-                                    value="<?php echo $sentencias_j20_3_otros; ?>">
-                                 </div>
-                                  </td>
-                                  <td>
-                                    <div class="input-group">
-                                    <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
-                                    type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group203";}?>"
-                                      name="sentencias_j20_3_otros_M" id="sentencias_j20_3_otros_M"
-                                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                                      value="<?php echo $sentencias_j20_3_otros_M; ?>">
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <div class="input-group">
-                                      <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
-                                      type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group203";}?>"
-                                      name="sentencias_j20_3_otros_H" id="sentencias_j20_3_otros_H"
-                                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                                      value="<?php echo $sentencias_j20_3_otros_H; ?>">
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <div class="input-group">
-                                    <input <?php if($estatus != 0) { echo "disabled='true'"; } ?>
-                                    type="number" min="0" pattern="^[0-9]+" class="form-control <?php if($estatus == 0){echo  "group203";}?>"
-                                      name="sentencias_j20_3_otros_T" id="sentencias_j20_3_otros_T"
-                                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                                      value="<?php echo $sentencias_j20_3_otros_T; ?>">
-                                    </div>
-                                  </td>
-                                  </tr>
 
                                 </tbody>
                               </table>
@@ -10783,7 +10898,7 @@ $idFormulario=$pregunta[0]["id"];
                                <tr>
                                  <td>4</td>
                                  <td>
-                                   Otras causas  (fallecimiento, acumulación, reclasificación)
+                                   Otras causas (por ejemplo: fallecimiento, acumulación, reclasificación)
                                  </td>
                                  <td>
                                      <div class="input-group">
@@ -12667,7 +12782,7 @@ $terapeutica_j26_9_imputadas_noapli=$pregunta[0]["terapeutica_j26_9_imputadas_no
                                                                    <!--  Inicio PREGUNTA 26.2  -->
                                                                    <div>
                                                                      <h5>
-                                                                       26.2.- Total de personas imputadas que ingresaron en el programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo.
+                                                                       26.2.- Total de personas imputadas que <u> ingresaron </u> en el programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo.
                                                                      </h5>
                                                                    </div>
 
@@ -12733,7 +12848,7 @@ $terapeutica_j26_9_imputadas_noapli=$pregunta[0]["terapeutica_j26_9_imputadas_no
                                                                    <!--  Inicio PREGUNTA 26.3  -->
                                                                    <div>
                                                                      <h5>
-                                                                       26.3.- Total de personas imputadas que egresaron de forma satisfactoria del programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo.
+                                                                       26.3.- Total de personas imputadas que <u> egresaron </u> de forma satisfactoria del programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo.
                                                                      </h5>
                                                                    </div>
 
@@ -12800,7 +12915,7 @@ $terapeutica_j26_9_imputadas_noapli=$pregunta[0]["terapeutica_j26_9_imputadas_no
                                                                    <!--  Inicio PREGUNTA 26.4  -->
                                                                              <div>
                                                                                <h5>
-                                                                                 26.4.- Total de personas imputadas que incumplieron el programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo y tipo de incumplimiento.
+                                                                                 26.4.- Total de personas imputadas que <u> incumplieron </u> el programa de Justicia Terapéutica para la atención y/o tratamiento específico del consumo problemático de sustancias psicoactivas. Desglosar por sexo y tipo de incumplimiento.
                                                                               </h5>
                                                                            </div>
 
@@ -14236,7 +14351,7 @@ $(".panel-body").on("click", ".crearTab1", function() {
                     }).then(function(result) {
                         if (result.value) {
 
-                            //window.location = "index.php?ruta=ventas&cliente="+seleccionarCliente;
+                          window.location = "jueces";tabs-1
 
                         }
                     })
@@ -14250,7 +14365,7 @@ $(".panel-body").on("click", ".crearTab1", function() {
                     }).then(function(result) {
                         if (result.value) {
 
-                            //  window.location = "ventas";
+                          window.location = "jueces#tabs-1";
 
                         }
                     })
@@ -14327,6 +14442,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j2.1 */var personal_j2_1_otros_H = $("#personal_j2_1_otros_H").val();
     /* j2.1 */var personal_j2_1_otros_T = $("#personal_j2_1_otros_T").val();
 
+    /* j2.1 */var personal_j2_1_total_M = $("#personal_j2_1_total_M").val();
+    /* j2.1 */var personal_j2_1_total_H = $("#personal_j2_1_total_H").val();
+    /* j2.1 */var personal_j2_1_total_T = $("#personal_j2_1_total_T").val();
+
     /* j2.2 */var personal_j2_2_mag_M = $("#personal_j2_2_mag_M").val();
     /* j2.2 */var personal_j2_2_mag_H = $("#personal_j2_2_mag_H").val();
     /* j2.2 */var personal_j2_2_mag_T = $("#personal_j2_2_mag_T").val();
@@ -14334,6 +14453,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j2.3 */var personal_j2_3_jue_M = $("#personal_j2_3_jue_M").val();
     /* j2.3 */var personal_j2_3_jue_H = $("#personal_j2_3_jue_H").val();
     /* j2.3 */var personal_j2_3_jue_T = $("#personal_j2_3_jue_T").val();
+
+    /* j2.4 */var personal_j2_4_siningre_M = $("#personal_j2_4_siningre_M").val();
+    /* j2.4 */var personal_j2_4_siningre_H = $("#personal_j2_4_siningre_H").val();
+    /* j2.4 */var personal_j2_4_siningre_T = $("#personal_j2_4_siningre_T").val();
 
     /* j2.4 */var personal_j2_4_de1a5000_M = $("#personal_j2_4_de1a5000_M").val();
     /* j2.4 */var personal_j2_4_de1a5000_H = $("#personal_j2_4_de1a5000_H").val();
@@ -14412,6 +14535,12 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j3 */var capacitacion_j3_otros_H = $("#capacitacion_j3_otros_H").val();
     /* j3 */var capacitacion_j3_otros_T = $("#capacitacion_j3_otros_T").val();
 
+    /* j3 */if ($("#capacitacion_j3_nosesabe").is(":checked")) {
+        var capacitacion_j3_nosesabe = "No se sabe";
+    } else {
+        var capacitacion_j3_nosesabe = "";
+    }
+
     /* j3.1 */var capacitacion_j3_1_sisjus_M = $("#capacitacion_j3_1_sisjus_M").val();
     /* j3.1 */var capacitacion_j3_1_sisjus_H = $("#capacitacion_j3_1_sisjus_H").val();
     /* j3.1 */var capacitacion_j3_1_sisjus_T = $("#capacitacion_j3_1_sisjus_T").val();
@@ -14431,6 +14560,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j3.1 */var capacitacion_j3_1_viomuj_M = $("#capacitacion_j3_1_viomuj_M").val();
     /* j3.1 */var capacitacion_j3_1_viomuj_H = $("#capacitacion_j3_1_viomuj_H").val();
     /* j3.1 */var capacitacion_j3_1_viomuj_T = $("#capacitacion_j3_1_viomuj_T").val();
+
+    /* j3.1 */var capacitacion_j3_1_mujdes_M = $("#capacitacion_j3_1_mujdes_M").val();
+    /* j3.1 */var capacitacion_j3_1_mujdes_H = $("#capacitacion_j3_1_mujdes_H").val();
+    /* j3.1 */var capacitacion_j3_1_mujdes_T = $("#capacitacion_j3_1_mujdes_T").val();
 
     /* j3.1 */var capacitacion_j3_1_asicon_M = $("#capacitacion_j3_1_asicon_M").val();
     /* j3.1 */var capacitacion_j3_1_asicon_H = $("#capacitacion_j3_1_asicon_H").val();
@@ -14536,6 +14669,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j2.1 */datos.append("personal_j2_1_otros_H", personal_j2_1_otros_H);
     /* j2.1 */datos.append("personal_j2_1_otros_T", personal_j2_1_otros_T);
 
+    /* j2.1 */datos.append("personal_j2_1_total_M", personal_j2_1_total_M);
+    /* j2.1 */datos.append("personal_j2_1_total_H", personal_j2_1_total_H);
+    /* j2.1 */datos.append("personal_j2_1_total_T", personal_j2_1_total_T);
+
     /* j2.2 */datos.append("personal_j2_2_mag_M", personal_j2_2_mag_M);
     /* j2.2 */datos.append("personal_j2_2_mag_H", personal_j2_2_mag_H);
     /* j2.2 */datos.append("personal_j2_2_mag_T", personal_j2_2_mag_T);
@@ -14543,6 +14680,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j2.3 */datos.append("personal_j2_3_jue_M", personal_j2_3_jue_M);
     /* j2.3 */datos.append("personal_j2_3_jue_H", personal_j2_3_jue_H);
     /* j2.3 */datos.append("personal_j2_3_jue_T", personal_j2_3_jue_T);
+
+    /* j2.4 */datos.append("personal_j2_4_siningre_M", personal_j2_4_siningre_M);
+    /* j2.4 */datos.append("personal_j2_4_siningre_H", personal_j2_4_siningre_H);
+    /* j2.4 */datos.append("personal_j2_4_siningre_T", personal_j2_4_siningre_T);
 
     /* j2.4 */datos.append("personal_j2_4_de1a5000_M", personal_j2_4_de1a5000_M);
     /* j2.4 */datos.append("personal_j2_4_de1a5000_H", personal_j2_4_de1a5000_H);
@@ -14617,6 +14758,8 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j3 */datos.append("capacitacion_j3_otros_H", capacitacion_j3_otros_H);
     /* j3 */datos.append("capacitacion_j3_otros_T", capacitacion_j3_otros_T);
 
+    /* j3 */datos.append("capacitacion_j3_nosesabe", capacitacion_j3_nosesabe);
+
     /* j3.1 */datos.append("capacitacion_j3_1_sisjus_M", capacitacion_j3_1_sisjus_M);
     /* j3.1 */datos.append("capacitacion_j3_1_sisjus_H", capacitacion_j3_1_sisjus_H);
     /* j3.1 */datos.append("capacitacion_j3_1_sisjus_T", capacitacion_j3_1_sisjus_T);
@@ -14636,6 +14779,10 @@ $(".panel-body").on("click", ".crearTab2", function() {
     /* j3.1 */datos.append("capacitacion_j3_1_viomuj_M", capacitacion_j3_1_viomuj_M);
     /* j3.1 */datos.append("capacitacion_j3_1_viomuj_H", capacitacion_j3_1_viomuj_H);
     /* j3.1 */datos.append("capacitacion_j3_1_viomuj_T", capacitacion_j3_1_viomuj_T);
+
+    /* j3.1 */datos.append("capacitacion_j3_1_mujdes_M", capacitacion_j3_1_mujdes_M);
+    /* j3.1 */datos.append("capacitacion_j3_1_mujdes_H", capacitacion_j3_1_mujdes_H);
+    /* j3.1 */datos.append("capacitacion_j3_1_mujdes_T", capacitacion_j3_1_mujdes_T);
 
     /* j3.1 */datos.append("capacitacion_j3_1_asicon_M", capacitacion_j3_1_asicon_M);
     /* j3.1 */datos.append("capacitacion_j3_1_asicon_H", capacitacion_j3_1_asicon_H);
@@ -14725,7 +14872,9 @@ $(".panel-body").on("click", ".crearTab2", function() {
                     }).then(function(result) {
                         if (result.value) {
 
-                            //window.location = "index.php?ruta=ventas&cliente="+seleccionarCliente;
+                        //  window.location = "jueces";
+
+
 
                         }
                     })
@@ -14739,7 +14888,7 @@ $(".panel-body").on("click", ".crearTab2", function() {
                     }).then(function(result) {
                         if (result.value) {
 
-                            //  window.location = "ventas";
+                      //    window.location = "jueces";
 
                         }
                     })
@@ -16946,10 +17095,7 @@ $(".panel-body").on("click", ".crearTab8", function() {
     /* j20 */  var sentencias_j20_3_traMen_M = $("#sentencias_j20_3_traMen_M").val();
     /* j20 */  var sentencias_j20_3_traMen_H = $("#sentencias_j20_3_traMen_H").val();
     /* j20 */  var sentencias_j20_3_traMen_T = $("#sentencias_j20_3_traMen_T").val();
-    /* j20 */  var sentencias_j20_3_otros = $("#sentencias_j20_3_otros").val();
-    /* j20 */  var sentencias_j20_3_otros_M = $("#sentencias_j20_3_otros_M").val();
-    /* j20 */  var sentencias_j20_3_otros_H = $("#sentencias_j20_3_otros_H").val();
-    /* j20 */  var sentencias_j20_3_otros_T = $("#sentencias_j20_3_otros_T").val();
+
 
     /* j20 */  if ($("#sentencias_j20_3_nosesabe").is(":checked")) {
         var sentencias_j20_3_nosesabe = "No se sabe";
@@ -17104,10 +17250,7 @@ $(".panel-body").on("click", ".crearTab8", function() {
     /* j20 */  datos.append("sentencias_j20_3_traMen_M", sentencias_j20_3_traMen_M);
     /* j20 */  datos.append("sentencias_j20_3_traMen_H", sentencias_j20_3_traMen_H);
     /* j20 */  datos.append("sentencias_j20_3_traMen_T", sentencias_j20_3_traMen_T);
-    /* j20 */  datos.append("sentencias_j20_3_otros", sentencias_j20_3_otros);
-    /* j20 */  datos.append("sentencias_j20_3_otros_M", sentencias_j20_3_otros_M);
-    /* j20 */  datos.append("sentencias_j20_3_otros_H", sentencias_j20_3_otros_H);
-    /* j20 */  datos.append("sentencias_j20_3_otros_T", sentencias_j20_3_otros_T);
+
     /* j20 */  datos.append("sentencias_j20_3_nosesabe", sentencias_j20_3_nosesabe);
     /* j20 */  datos.append("sentencias_j20_4_suspenCond", sentencias_j20_4_suspenCond);
     /* j20 */  datos.append("sentencias_j20_4_acuerdo", sentencias_j20_4_acuerdo);
@@ -17873,6 +18016,25 @@ if (inp24.checked){
 inp24.addEventListener('change', updateStatus24)
 
 </script>
+
+
+<script type="text/javascript">
+
+var inp03 = document.getElementById('capacitacion_j3_nosesabe')
+
+function updateStatus03() {
+
+if (inp03.checked){
+  $("input.group03").attr("disabled", true).removeAttr("checked").val(" ");
+}  else{
+  $("input.group03").attr("disabled", false);
+}
+}
+
+inp03.addEventListener('change', updateStatus03)
+
+</script>
+
 
 <script type="text/javascript">
 
@@ -18848,17 +19010,28 @@ no252.addEventListener('change', updateStatus252)
 
 <script type="text/javascript">
 
-var nosesabe26 = document.getElementById('terapeutica_j26_justTer_nosesabe');
+var inp26 = document.getElementById('terapeutica_j26_justTer_noaplica')
+var inp26nin = document.getElementById('terapeutica_j26_justTer_nosesabe')
 
 function updateStatus26() {
-  if (nosesabe26.checked) {
-    $("input.group26").attr("disabled", true).removeAttr("checked").val(" ");
-}  else {
-    $("input.group26").attr("disabled", false);
-  }
+
+if (inp26.checked){
+  $("input.group26").attr("disabled", true).removeAttr("checked").val(" ");
+  inp26nin.disabled = true;
+  inp26nin.checked = false;
+} else if (inp26nin.checked){
+  $("input.group26").attr("disabled", true).removeAttr("checked").val(" ");
+  inp26.disabled = true;
+  inp26.checked = false;
+} else{
+  $("input.group26").attr("disabled", false);
+  inp26nin.disabled = false;
+  inp26.disabled = false;
+}
 }
 
-nosesabe26.addEventListener('change', updateStatus26)
+inp26nin.addEventListener('change', updateStatus26)
+inp26.addEventListener('change', updateStatus26)
 
 </script>
 
@@ -19006,7 +19179,40 @@ inp269.addEventListener('change', updateStatus269)
 
 </script>
 
-
+<script type="text/javascript">
+function validarfor(){
+var pcontacto = document.getElementsByName("pcontacto")[0].value;
+var area = document.getElementsByName("area")[0].value;
+var cargo = document.getElementsByName("cargo")[0].value;
+var mail = document.getElementsByName("mail")[0].value;
+var telofi = document.getElementsByName("telofi")[0].value;
+var ext = document.getElementsByName("ext")[0].value;
+var telextra = document.getElementsByName("telextra")[0].value;
+var pcontacto2 = document.getElementsByName("pcontacto2")[0].value;
+var area2 = document.getElementsByName("area2")[0].value;
+var cargo2 = document.getElementsByName("cargo2")[0].value;
+var mail2 = document.getElementsByName("mail2")[0].value;
+var telofi2 = document.getElementsByName("telofi2")[0].value;
+var ext2 = document.getElementsByName("ext2")[0].value;
+var telextra2 = document.getElementsByName("telextra2")[0].value;
+var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+if ( !expr.test(correo) ){
+//COMPRUEBA MAIL
+    alert("Error: La dirección de correo " + correo + " es incorrecta.");
+    return false;
+}
+if ((pcontacto == "") || (area == "") ||
+    (cargo == "") || (mail == "") ||
+    (telofi == "") || (ext == "") ||
+    (telextra == "") || (pcontacto2 == "") ||
+    (area2 == "") || (cargo2 == "") ||
+    (mail2 == "") || (telofi2 == "") ||
+    (ext2 == "") || (telextra2 == "")) {  //COMPRUEBA CAMPOS VACIOS
+    alert("Los campos no pueden quedar vacios");
+    return false;
+}
+}
+</script>
 
 
 
